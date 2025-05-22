@@ -103,3 +103,13 @@ select  first_name, last_name,
 		concat(first_name, ' ', last_name, 'hire date is ', hire_date) as 문장		-- 이현진 입사일은 2024-01-01 입니다. 
         
 from employees;
+
+-- 전체 직원의 정보
+-- 이름과 성 사이에 -으로 구분 / 월급 / 연봉 / 보너스(월급*12+5000) / 전화번호
+
+select  concat(first_name, '-', last_name) as '성명', 
+		salary 월급, 
+		salary*12 연봉,
+        salary*12+5000 '보너스', 
+        phone_number 전화번호
+from employees;
