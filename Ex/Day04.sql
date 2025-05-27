@@ -233,7 +233,7 @@ from employees;
  60~100이면 'B-TEAM'
  110~150이면 'C-TEAM'
  나머지는 '팀없음' 으로 
- 출력하세요.
+출력하세요.
 */
 select  first_name, 
 		department_id,
