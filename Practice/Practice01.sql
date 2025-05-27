@@ -18,8 +18,10 @@ order by hire_date asc, first_name asc;
 업무(jobs)별로 업무이름(job_title)과 최고월급(max_salary)을 월급의 내림차순(DESC)로 정렬
 하세요.
 ****************************************/
-select * 
-from employees;
+select  job_title, 
+		max_salary
+from jobs
+order by max_salary desc;
 /****************************************
 문제3.
 담당 매니저가 배정되어있으나 커미션비율이 없고, 
@@ -91,10 +93,12 @@ order by length(job_id) desc;
 /****************************************
 문제9.
 정확하지 않지만, 지사가 있을 것으로 예상되는 나라들을 나라이름을 대문자로 출력하고
-올림차순(ASC)으로 정렬해 보세오.
+올림차순(ASC)으로 정렬해 보세오.   from countries
 ****************************************/
-
-
+select  country_name, 
+		ucase(country_name)
+from countries
+order by country_name asc;
 /****************************************
 문제10.
 입사일이 03/12/31 일 이전 입사한 
