@@ -18,7 +18,7 @@ order by hire_date asc, first_name asc;
 업무(jobs)별로 업무이름(job_title)과 최고월급(max_salary)을 월급의 내림차순(DESC)로 정렬
 하세요.
 ****************************************/
-select *
+select * 
 from employees;
 /****************************************
 문제3.
@@ -94,6 +94,7 @@ order by length(job_id) desc;
 올림차순(ASC)으로 정렬해 보세오.
 ****************************************/
 
+
 /****************************************
 문제10.
 입사일이 03/12/31 일 이전 입사한 
@@ -102,8 +103,11 @@ order by length(job_id) desc;
 ****************************************/
 select  first_name,
 		salary,
-        phone_number,
+		concat(
+        substring(phone_number, 1, 3), '-', 
+        substring(phone_number, 5, 3), '-', 
+        substring(phone_number, 9)
+		) as phone_number,
         hire_date
 from employees
-where hire_date < '03/12/31'
-;
+where hire_date < '03/12/31';
