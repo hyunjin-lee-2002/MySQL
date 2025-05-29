@@ -310,4 +310,4 @@ from employees e, (select  department_id,
 				  from employees
 				  group by department_id) s
 where e.department_id = s.department_id
-and s.salary = e.maxSalary
+and s.salary = e.maxSalary;
